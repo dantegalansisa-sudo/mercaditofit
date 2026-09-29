@@ -1,0 +1,18 @@
+.statsbar { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 44px 0; }
+.statsbar__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.statsbar__grid li { display: flex; align-items: center; justify-content: center; gap: 22px; padding: 6px 16px; }
+.statsbar__grid li + li { border-left: 1px solid var(--line); }
+.statsbar__grid div { display: flex; flex-direction: column; }
+.statsbar__num { font-family: var(--font-display); font-weight: 900; font-style: italic; font-size: 38px; line-height: 1; }
+.statsbar__grid div > span { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
+
+@media (max-width: 900px) {
+  .statsbar__grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  .statsbar__grid li:nth-child(3) { border-left: 0; }
+  .statsbar__grid li { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  .statsbar__grid li { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .statsbar__num { font-size: 32px; }
+  .statsbar__grid div > span { font-size: 11px; }
+}

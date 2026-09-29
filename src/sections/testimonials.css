@@ -1,0 +1,51 @@
+.testi { padding: 72px 0; background: var(--bg-2); }
+.testi__inner, .ig__inner { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center; }
+.testi__title { font-size: clamp(26px, 2.4vw, 34px); }
+.testi__head p, .ig__head p { color: var(--muted); margin-top: 16px; font-size: 16px; }
+
+.carousel { position: relative; display: flex; align-items: center; gap: 16px; min-width: 0; }
+.carousel__track {
+  display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; flex: 1; min-width: 0;
+  padding: 8px 4px 16px;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__nav { flex: none; }
+
+.review {
+  margin: 0; flex: 0 0 calc((100% - 40px) / 3); scroll-snap-align: start; display: flex; gap: 16px;
+  background: var(--white); border-radius: var(--r-md); padding: 22px; box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s;
+}
+.review:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.review__avatar {
+  width: 58px; height: 58px; border-radius: 50%; flex: none; display: grid; place-items: center;
+  background: var(--ink); color: var(--gold); font-weight: 700; font-size: 18px; box-shadow: 0 0 0 3px var(--gold-soft);
+}
+.review figcaption { font-weight: 700; font-size: 15px; }
+.review blockquote { margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: var(--ink-soft); }
+
+.dots { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+.dots span { width: 8px; height: 5px; border-radius: 3px; background: #d6d3ca; transition: width .3s, background .3s; }
+.dots span.is-on { width: 22px; background: var(--gold); }
+
+.ig { padding: 72px 0; background: var(--bg); }
+.ig__head .magnetic { margin-top: 22px; }
+.ig__track { gap: 12px; }
+.ig__tile {
+  position: relative; flex: 0 0 calc((100% - 72px) / 7); min-width: 120px; aspect-ratio: 4 / 5; border-radius: var(--r-sm); overflow: hidden;
+  scroll-snap-align: start; background: var(--ink);
+}
+.ig__tile img { width: 100%; height: 100%; object-fit: cover; transform: scale(2.4); transition: transform .8s var(--ease), filter .4s; }
+.ig__tile:hover img { transform: scale(2.6); filter: brightness(.8); }
+.ig__icon { position: absolute; right: 8px; bottom: 8px; width: 28px; height: 28px; border-radius: 6px; display: grid; place-items: center; background: rgba(253,253,251,.9); }
+
+@media (max-width: 1100px) {
+  .testi__inner, .ig__inner { grid-template-columns: 1fr; gap: 28px; }
+  .review { flex-basis: calc((100% - 20px) / 2); }
+}
+@media (max-width: 640px) {
+  .review { flex-basis: 86%; padding: 18px; }
+  .carousel__nav { display: none; }
+  .carousel__track { margin: 0 calc(var(--pad-x) * -1); padding-left: var(--pad-x); padding-right: var(--pad-x); scroll-padding: 0 var(--pad-x); }
+  .ig__tile { flex-basis: 42%; }
+}
