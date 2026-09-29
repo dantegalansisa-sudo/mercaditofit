@@ -41,7 +41,8 @@
 
 .pcard__img { aspect-ratio: 1 / 1; overflow: hidden; background: var(--bg-2); }
 .pcard__img > * { width: 100%; height: 100%; transition: transform .7s var(--ease); }
-.pcard__img img { object-fit: contain; padding: 18px; }
+.pcard__img img { object-fit: contain; padding: 18px; mix-blend-mode: multiply; }
+.pcard__img img.is-cover { object-fit: cover; padding: 0; mix-blend-mode: normal; }
 .pcard:hover .pcard__img > * { transform: scale(1.08); }
 
 .pcard__body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }

@@ -12,15 +12,15 @@ const reviews = [
   { name: 'Luis F.', initials: 'LF', text: 'En Comendador no había dónde conseguir C4 original. Ahora lo compro siempre aquí.' },
 ]
 
-/** Mosaico de Instagram: recortes de las fotos de marca hasta tener posts reales. */
+/** Mosaico de Instagram: fotos de marca (reemplazar por posts reales cuando estén). */
 const igTiles = [
-  { src: '/images/resultados.webp', pos: '22% 20%' },
-  { src: '/images/hero.webp', pos: '48% 40%' },
-  { src: '/images/energia.webp', pos: '56% 40%' },
-  { src: '/images/hero.webp', pos: '76% 50%' },
-  { src: '/images/resultados.webp', pos: '90% 80%' },
-  { src: '/images/energia.webp', pos: '82% 30%' },
-  { src: '/images/hero.webp', pos: '96% 60%' },
+  { src: '/images/instagram/ig-4.webp', pos: '50% 50%' },
+  { src: '/images/instagram/ig-1.webp', pos: '42% 40%' },
+  { src: '/images/instagram/ig-2.webp', pos: '50% 50%' },
+  { src: '/images/resultados.webp', pos: '26% 30%' },
+  { src: '/images/instagram/ig-3.webp', pos: '58% 50%' },
+  { src: '/images/products/producto-proteina-1.webp', pos: '50% 50%' },
+  { src: '/images/energia.webp', pos: '58% 45%' },
 ]
 
 function useScroller() {

@@ -4,7 +4,7 @@ import { LogoMark } from './Logo'
 /** Foto del producto, o placeholder con estilo de marca mientras llega la imagen real. */
 export default function ProductImage({ product, compact }: { product: Product; compact?: boolean }) {
   if (product.hasImage) {
-    return <img src={productImage(product)} alt={`${product.brand} ${product.name}`} loading="lazy" decoding="async" />
+    return <img className={product.cover ? 'is-cover' : ''} src={productImage(product)} alt={`${product.brand} ${product.name}`} loading="lazy" decoding="async" />
   }
   return (
     <div className={`ph ${compact ? 'ph--compact' : ''}`} role="img" aria-label={`${product.brand} ${product.name} (imagen pendiente)`}>

@@ -35,8 +35,8 @@
   position: relative; flex: 0 0 calc((100% - 72px) / 7); min-width: 120px; aspect-ratio: 4 / 5; border-radius: var(--r-sm); overflow: hidden;
   scroll-snap-align: start; background: var(--ink);
 }
-.ig__tile img { width: 100%; height: 100%; object-fit: cover; transform: scale(2.4); transition: transform .8s var(--ease), filter .4s; }
-.ig__tile:hover img { transform: scale(2.6); filter: brightness(.8); }
+.ig__tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease), filter .4s; }
+.ig__tile:hover img { transform: scale(1.08); filter: brightness(.8); }
 .ig__icon { position: absolute; right: 8px; bottom: 8px; width: 28px; height: 28px; border-radius: 6px; display: grid; place-items: center; background: rgba(253,253,251,.9); }
 
 @media (max-width: 1100px) {

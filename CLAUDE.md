@@ -68,34 +68,34 @@ El original se mueve a `design/originales/productos/`. Mientras `hasImage` sea `
 placeholder de marca con el nombre de archivo esperado.
 
 ### Mapeo actual
-| Archivo | Sección |
-|---|---|
-| `public/images/hero.webp` | Hero (← `foto del heros.png`) |
-| `public/images/energia.webp` | Oferta "Más energía para tus entrenamientos" (← `foto de la seccion as energia…png`) |
-| `public/images/resultados.webp` | "Resultados reales" (← `foto de la seccion resultados reales.png`) |
-| mismas 3 fotos (recortes) | mosaico de Instagram (temporal) |
+| Archivo | Origen (`/design/`) | Uso |
+|---|---|---|
+| `images/hero.webp` | `originales/foto del heros.png` | Hero |
+| `images/energia.webp` | `originales/foto de la seccion as energia…png` | Oferta "Más energía" |
+| `images/resultados.webp` | `originales/foto de la seccion resultados reales.png` | Resultados reales |
+| `products/producto-proteina-1.webp` | `proteinas.png` | ON Gold Standard Whey |
+| `products/producto-proteina-2.webp` | `ghost whey.png` | Ghost Whey |
+| `products/producto-proteina-3.webp` | `bsn syntha.png` | BSN Syntha-6 |
+| `products/producto-creatina-1.webp` | `evl creatine.png` | EVL Creatine 1000 |
+| `products/producto-creatina-2.webp` | `creatina.png` | Nutrex Creatine Monohydrate |
+| `products/producto-preentreno-1.webp` | `pre entreno.png` | Cellucor C4 |
+| `products/producto-aminoacidos-1.webp` | `aminoacido.png` | ON Essential Amino Energy |
+| `products/producto-quemador-1.webp` | `quemadores.png` | DMoose Fat Burner |
+| `products/producto-vitaminas-1.webp` | `pak multivit.png` | Universal Animal Pak |
+| `products/producto-vitaminas-2.webp` | `image (98).png` | ON Multivitamin for Men |
+| `products/producto-salud-1.webp` | `vitaminas.png` | Vitamina C & Zinc |
+| `products/producto-accesorio-1.webp` | `acesorios.png` (recorte derecho) | Shaker MF |
+| `products/producto-accesorio-2.webp` | `acesorios.png` (recorte izquierdo) | Bolso deportivo MF |
+| `instagram/ig-1…4.webp` | `seccion instagram foto`, `foto1`, `foto2`, `foto4` (recortada) | Mosaico Instagram (+ resultados, whey, energía = 7 tiles) |
+
+Nota: `acesorios.png`, `seccion instagram foto2.png` y `foto3.png` son el mismo archivo (mismo hash).
+Productos de fotos lifestyle usan `cover: true` (llenan el marco); los packshots usan `mix-blend-mode: multiply`
+para fundir el fondo blanco con la card.
 
 ### Imágenes pendientes
-Productos → `public/images/products/` (cuadradas, fondo limpio, ~900px):
-
-| Archivo esperado | Producto |
-|---|---|
-| `producto-proteina-1.webp` | Optimum Nutrition Gold Standard 100% Whey |
-| `producto-proteina-2.webp` | Ghost Whey Protein |
-| `producto-proteina-3.webp` | BSN Syntha-6 |
-| `producto-creatina-1.webp` | EVL Creatine Monohydrate |
-| `producto-creatina-2.webp` | ON Micronized Creatine |
-| `producto-preentreno-1.webp` | Cellucor C4 Original |
-| `producto-preentreno-2.webp` | Ghost Legend Pre-Workout |
-| `producto-aminoacidos-1.webp` | Scivation Xtend BCAA |
-| `producto-aminoacidos-2.webp` | ON Essential Amino Energy |
-| `producto-quemador-1.webp` | MuscleTech Hydroxycut Hardcore Elite |
-| `producto-quemador-2.webp` | Nutrex Lipo-6 Black |
-| `producto-vitaminas-1.webp` | Universal Animal Pak |
-| `producto-vitaminas-2.webp` | ON Opti-Men |
-| `producto-salud-1.webp` | Omega-3 Fish Oil |
-| `producto-accesorio-1.webp` | Shaker MF 700 ml |
-| `producto-accesorio-2.webp` | Straps de levantamiento |
-
-Opcionales: fotos reales de clientes para testimonios (hoy iniciales), 6–7 posts reales de Instagram,
-foto de fachada de cada sucursal, dirección exacta de La Paz, horarios, email y redes (Facebook/TikTok).
+Todos los productos del catálogo tienen foto. Opcionales para una versión final:
+- Más productos por categoría (hoy 1 en Pre entreno, Aminoácidos, Quemadores, Salud y bienestar):
+  agregar entrada en `products.ts` + `producto-<categoria>-N.webp`.
+- Posts reales de Instagram (hoy fotos de marca), fotos reales de clientes para testimonios (hoy iniciales),
+  fachada de cada sucursal.
+- Datos: dirección exacta de La Paz, horarios, email, Facebook/TikTok, precios reales.
